@@ -5,8 +5,29 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 
 const PreAnimation = ({ onComplete }: { onComplete: () => void }) => {
   const [startTransition, setStartTransition] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   
   useEffect(() => {
+    // Check for dark mode
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || document.documentElement.classList.contains('dark')) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+    
+    // Setup observer to watch for dark mode changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const isDark = document.documentElement.classList.contains('dark');
+          setDarkMode(isDark);
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, { attributes: true });
+    
     // Animation completes after 3 seconds
     const animationTimer = setTimeout(() => {
       // Add a 0.3 second pause before starting the transition
@@ -18,12 +39,17 @@ const PreAnimation = ({ onComplete }: { onComplete: () => void }) => {
       return () => clearTimeout(pauseTimer);
     }, 3000);
     
-    return () => clearTimeout(animationTimer);
+    return () => {
+      clearTimeout(animationTimer);
+      observer.disconnect();
+    };
   }, [onComplete]);
 
   return (
     <div 
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-background px-4 transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center ${
+        darkMode ? "bg-gray-950" : "bg-gray-50"
+      } px-4 transition-opacity duration-500 ${
         startTransition ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
