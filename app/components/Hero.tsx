@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SparklesText } from "@/components/magicui/sparkles-text";
 import { InteractiveGridPattern } from "@/components/magicui/interactive-grid-pattern";
@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 
 const Hero = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const textRef = useRef(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');

@@ -71,7 +71,7 @@ const Services = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div 
               key={service.id}
               className={`service-card group p-6 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}
