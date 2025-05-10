@@ -10,7 +10,7 @@ export default function BookCallPage() {
           <div>
             <h1 className="text-4xl font-bold mb-8">Book a <span className="gradient-text">Call</span></h1>
             <p className="text-xl mb-8">
-              Ready to discuss your content needs? Schedule a call with our team and let's talk about how we can help bring your digital vision to life.
+              Ready to discuss your content needs? Schedule a call with our team and let&apos;s talk about how we can help bring your digital vision to life.
             </p>
             
             <div className="service-card p-8">

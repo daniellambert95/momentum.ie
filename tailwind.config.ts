@@ -8,12 +8,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary)',
-        'primary-light': 'var(--primary-light)',
-        'primary-dark': 'var(--primary-dark)',
+        'primary': '#047857',
+        'primary-light': '#10b981',
+        'primary-dark': '#065f46',
+        'brand-green': '#357a67',
+        'brand-green-light': '#dcfce7',
+        'brand-green-dark': '#16a34a',
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, var(--gradient-start), var(--gradient-end))',
+        'gradient-primary': 'linear-gradient(135deg, #047857, #0e7490)',
       },
     },
   },

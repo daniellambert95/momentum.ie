@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { FiEdit3, FiCalendar, FiMessageSquare, FiMoreHorizontal } from "react-icons/fi";
-import Image from "next/image";
 
 const Services = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeService, setActiveService] = useState(null);
+  const [activeService, setActiveService] = useState<number | null>(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -76,7 +75,7 @@ const Services = () => {
             <div 
               key={service.id}
               className={`service-card group p-6 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}
-              onMouseEnter={() => setActiveService(service.id as any)}
+              onMouseEnter={() => setActiveService(service.id)}
               onMouseLeave={() => setActiveService(null)}
             >
               <div className="mb-4 relative">

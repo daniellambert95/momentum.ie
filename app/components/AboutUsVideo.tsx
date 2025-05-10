@@ -26,7 +26,7 @@ const AboutUsVideo = () => {
             />
           </div>
           <div className="mt-6 text-center">
-            <p className="text-lg text-gray-800 dark:text-gray-200">"We take your ideas and turn them into awesome content that gets people talking about your brand!"</p>
+            <p className="text-lg text-gray-800 dark:text-gray-200">&quot;We take your ideas and turn them into awesome content that gets people talking about your brand!&quot;</p>
           </div>
         </div>
       </div>

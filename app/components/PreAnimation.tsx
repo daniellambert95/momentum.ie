@@ -4,14 +4,11 @@ import { useEffect, useState } from "react";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 const PreAnimation = ({ onComplete }: { onComplete: () => void }) => {
-  const [animationComplete, setAnimationComplete] = useState(false);
   const [startTransition, setStartTransition] = useState(false);
   
   useEffect(() => {
     // Animation completes after 3 seconds
     const animationTimer = setTimeout(() => {
-      setAnimationComplete(true);
-      
       // Add a 0.3 second pause before starting the transition
       const pauseTimer = setTimeout(() => {
         setStartTransition(true);

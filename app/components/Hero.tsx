@@ -59,12 +59,12 @@ const Hero = () => {
             </h1>
             
             <p className={`text-xl font-medium italic ${darkMode ? 'text-primary-light' : 'text-primary'} animate-fade-in-delayed-more`}>
-              Let's create something great together.
+              Let&apos;s create something great together.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-delayed-most">
               <Link href="/contact" className="btn-primary text-center group relative overflow-hidden">
-                <span className="relative z-10">Let's Connect</span>
+                <span className="relative z-10">Let&apos;s Connect</span>
                 <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Link>
               <Link href="/book-call" className="btn-secondary text-center group relative overflow-hidden">

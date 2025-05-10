@@ -22,12 +22,12 @@ const AboutUs = () => {
           
           {/* Content */}
           <div className="lg:w-1/2">
-            <span className="inline-block text-sm font-semibold tracking-wider text-primary-light uppercase mb-3">About Momentum</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary dark:text-gray-200">We help your content work harder for you</h2>
+            <span className="inline-block text-sm font-semibold tracking-wider text-primary-light uppercase mt-12 mb-3">About Momentum</span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-primary dark:text-gray-200">We help your content work harder for you</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             From brainstorming ideas to creating, posting, and managing your content, we keep it simple, effective, and stress-free. Local impact, national reach.
 
-Whatever you need, we've got your back.
+Whatever you need, we&apos;ve got your back.
             </p>
             
             <ul className="space-y-6 mb-8">
@@ -38,7 +38,7 @@ Whatever you need, we've got your back.
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1">Our Mission</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    We're on a mission to sprinkle some digital fairy dust on businesses, helping them grow and making their customers fall head over heels for them. No magic wands needed, just pure digital awesomeness!
+                    We&apos;re on a mission to sprinkle some digital fairy dust on businesses, helping them grow and making their customers fall head over heels for them. No magic wands needed, just pure digital awesomeness!
                   </p>
                 </div>
               </li>
@@ -50,7 +50,7 @@ Whatever you need, we've got your back.
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-1">Our Vision</h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Picture this: We want to be the cool kids of the digital world - the ones everyone wants to hang out with because we make amazing things happen. We're not just here to build websites; we're here to build success stories!
+                    Picture this: We want to be the cool kids of the digital world - the ones everyone wants to hang out with because we make amazing things happen. We&apos;re not just here to build websites; we&apos;re here to build success stories!
                   </p>
                 </div>
               </li>

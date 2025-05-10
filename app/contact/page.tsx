@@ -10,8 +10,8 @@ export default function ContactPage() {
           <div>
             <h1 className="text-4xl font-bold mb-8">Get in <span className="gradient-text">Touch</span></h1>
             <p className="text-xl mb-8">
-              Ready to take your content to the next level? We're here to help. 
-              Reach out to us and let's start creating something amazing together.
+              Ready to take your content to the next level? We&apos;re here to help. 
+              Reach out to us and let&apos;s start creating something amazing together.
             </p>
             <div className="space-y-4">
               <div>

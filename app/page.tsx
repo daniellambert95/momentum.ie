@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,7 +10,6 @@ import SlideShowcase from './components/SlideShowcase';
 import AboutUs from './components/AboutUs';
 
 export default function Home() {
-  const [showPreAnimation, setShowPreAnimation] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
   // Handle animation completion
@@ -21,7 +20,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col">
-      {showPreAnimation && <PreAnimation onComplete={handleAnimationComplete} />}
+      {!showContent && <PreAnimation onComplete={handleAnimationComplete} />}
       
       {showContent && (
         <>
