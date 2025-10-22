@@ -8,10 +8,14 @@ export default function ContactPage() {
       <div className="container mx-auto px-6 md:px-12 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h1 className="text-4xl font-bold mb-8">Get in <span className="gradient-text">Touch</span></h1>
-            <p className="text-xl mb-8">
-              Ready to take your content to the next level? We&apos;re here to help. 
-              Reach out to us and let&apos;s start creating something amazing together.
+            <h1 className="text-4xl md:text-5xl font-bold mb-8">
+              Let&apos;s Create Something That <span className="gradient-text">Connects</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-6 text-gray-700 dark:text-gray-300">
+              Ready to start your next campaign or shoot?
+            </p>
+            <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">
+              Reach out — we&apos;d love to bring your story to life.
             </p>
             <div className="space-y-4">
               <div>
@@ -25,8 +29,8 @@ export default function ContactPage() {
             </div>
             
             <div className="mt-12">
-              <Link href="/book-call" className="btn-primary inline-flex items-center space-x-2 group">
-                <span className="relative z-10">Book a Call</span>
+              <Link href="/book-call" className="btn-primary inline-flex items-center space-x-2 group relative overflow-hidden">
+                <span className="relative z-10">Get In Touch</span>
                 <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Link>
             </div>

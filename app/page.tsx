@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import HeroBlurb from './components/HeroBlurb';
 import Services from './components/Services';
 import PreAnimation from './components/PreAnimation';
 import AboutUsVideo from './components/AboutUsVideo';
 import SlideShowcase from './components/SlideShowcase';
-import AboutUs from './components/AboutUs';
+import ReelsShowcase from './components/ReelsShowcase';
+import ClientsCollaborations from './components/ClientsCollaborations';
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
@@ -26,9 +28,11 @@ export default function Home() {
         <>
           <Navbar />
           <Hero />
-          <SlideShowcase />
-          <AboutUs />
+          <HeroBlurb />
           <Services />
+          <ReelsShowcase />
+          <ClientsCollaborations />
+          <SlideShowcase />
           <AboutUsVideo />
         </>
       )}

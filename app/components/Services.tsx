@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FiEdit3, FiCalendar, FiMessageSquare, FiMoreHorizontal } from "react-icons/fi";
+import { FiVideo, FiCamera, FiMessageSquare, FiTrendingUp, FiEdit3, FiUsers } from "react-icons/fi";
 
 const Services = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,27 +33,39 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Content Creation",
-      icon: <FiEdit3 className="w-8 h-8" />,
-      description: "Bring your brand's vision to life with content that captivates. From eye-catching visuals and professional video production to dynamic social media assets, we create content that tells your story and grabs attention, helping your business stand out in a crowded market."
+      title: "Video Production",
+      icon: <FiVideo className="w-8 h-8" />,
+      description: "From short-form Reels to full campaign shoots, we produce cinematic, high-impact video content that captures attention and drives engagement."
     },
     {
       id: 2,
-      title: "Content Management",
-      icon: <FiCalendar className="w-8 h-8" />,
-      description: "Let us handle the heavy lifting. Our content management service ensures your posts are scheduled, your campaigns are on track, and your messaging stays consistent. We'll manage everything from publishing to performance monitoring, so you can focus on growing your business."
+      title: "Photography & Lifestyle Shoots",
+      icon: <FiCamera className="w-8 h-8" />,
+      description: "Clean, eye-catching imagery for social, web, and print - capturing the personality behind every product, space, and story."
     },
     {
       id: 3,
-      title: "Consultancy",
+      title: "Social Media Content",
       icon: <FiMessageSquare className="w-8 h-8" />,
-      description: "Whether you need fresh ideas, guidance on structure, or help refining your content, our consultancy service is here to support you. We offer expert advice, practical solutions, and hands on guidance to ensure your social media and content creation align perfectly with your brand's goals. Let's work together to create content that connects and delivers."
+      description: "Scroll-stopping videos and posts designed to move smoothly, built to connect with your audience and grow your brand presence."
     },
     {
       id: 4,
-      title: "Other Services",
-      icon: <FiMoreHorizontal className="w-8 h-8" />,
-      description: "Looking for something different? We offer a range of additional creative services tailored to your unique needs. From bespoke projects to out-of-the-box ideas, we're here to help bring your vision to life. Get in touch with us today to discuss how we can support your next creative adventure!"
+      title: "Social Media Consultancy",
+      icon: <FiTrendingUp className="w-8 h-8" />,
+      description: "We help businesses develop clear content strategies, refine their tone of voice, and plan consistent posting that converts. Whether you manage your own social or want to strengthen your approach, we guide you with clarity and direction."
+    },
+    {
+      id: 5,
+      title: "Graphic Design",
+      icon: <FiEdit3 className="w-8 h-8" />,
+      description: "Led by our designer Adam, we craft bold, cohesive visuals that tie everything together - from social graphics and packaging to menus, posters, and campaign materials. Our design work ensures your brand looks as good as it feels."
+    },
+    {
+      id: 6,
+      title: "Brand & Community Storytelling",
+      icon: <FiUsers className="w-8 h-8" />,
+      description: "We bring out the human side of your brand, creating connection through story — from local businesses to national campaigns."
     }
   ];
 
@@ -66,11 +78,14 @@ const Services = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">
-            Our <span className="gradient-text font-extrabold">Services</span>
+            What We <span className="gradient-text font-extrabold">Do</span>
           </h2>
+          <p className={`text-lg md:text-xl ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            We craft impactful visual content that feels real — built around people, places, and purpose.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div 
               key={service.id}
@@ -93,14 +108,6 @@ const Services = () => {
         <div className="mt-16 text-center">
           <a href="/contact" className="btn-primary inline-flex items-center space-x-2 group">
             Get Started
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-              viewBox="0 0 20 20" 
-              fill="currentColor"
-            >
-              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
           </a>
         </div>`
       </div>

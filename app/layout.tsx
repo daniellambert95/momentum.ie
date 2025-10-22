@@ -9,8 +9,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Momentum | Digital Content Creation Agency",
-  description: "Bringing your digital vision to life with creative and professional content creation services.",
+  title: "Momentum | Content That Connects - Video & Photo Content Ireland",
+  description: "Authentic, story-driven video and photo content for brands and local businesses across Ireland. From national retailers to independent shops, we help businesses capture what makes them unique.",
+  keywords: ["video production Ireland", "content creation", "social media content", "photography Ireland", "brand storytelling", "County Wicklow", "digital marketing"],
+  openGraph: {
+    title: "Momentum | Content That Connects",
+    description: "We create authentic, story-driven video and photo content for brands and local businesses across Ireland.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
