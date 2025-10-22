@@ -56,23 +56,15 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Center: Logo */}
-          <Link href="/" className="hidden md:flex items-center gap-2 group flex-1 justify-center">
+          {/* Logo - Centered on Desktop, Left on Mobile */}
+          <Link href="/" className="flex items-center gap-2 group md:flex-1 md:justify-center">
             <Logo />
             <span className="text-2xl font-bold transition-colors text-[#142929]">
               Momentum
             </span>
           </Link>
 
-          {/* Mobile: Logo (left aligned) */}
-          <Link href="/" className="flex md:hidden items-center gap-2 group">
-            <Logo />
-            <span className="text-2xl font-bold transition-colors text-[#142929]">
-              Momentum
-            </span>
-          </Link>
-
-          {/* Right: CTA Button */}
+          {/* Right: CTA Button (Desktop) / Hamburger (Mobile) */}
           <div className="hidden md:flex items-center gap-4 flex-1 justify-end">
             <Link
               href="/book-call"
@@ -83,10 +75,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center ml-auto">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md transition-colors text-[#142929] hover:bg-[#C8D5B9]/30"
+              className="p-2 rounded-md transition-colors text-[#142929] hover:bg-[#C8D5B9]/30 z-50 relative"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
@@ -99,48 +91,67 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4 bg-[#F5E6D3]">
-            <div className="flex flex-col gap-2 pt-4">
-              <Link
-                href="/"
-                className="px-4 py-2 rounded-md font-medium text-[#142929] hover:bg-[#C8D5B9]/30 hover:text-[#4A7C7E]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link
-                href="/services"
-                className="px-4 py-2 rounded-md font-medium text-[#142929] hover:bg-[#C8D5B9]/30 hover:text-[#4A7C7E]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/about"
-                className="px-4 py-2 rounded-md font-medium text-[#142929] hover:bg-[#C8D5B9]/30 hover:text-[#4A7C7E]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 rounded-md font-medium text-[#142929] hover:bg-[#C8D5B9]/30 hover:text-[#4A7C7E]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <Link
-                href="/book-call"
-                className="mx-4 mt-2 px-6 py-2.5 rounded-full font-semibold text-center transition-all bg-[#142929] text-[#F5E6D3]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Book a Call
-              </Link>
-            </div>
+        {/* Full-Screen Mobile Menu */}
+        <div
+          className={`md:hidden fixed inset-0 bg-[#F5E6D3] z-40 transition-all duration-500 ease-in-out ${
+            mobileMenuOpen
+              ? 'opacity-100 visible'
+              : 'opacity-0 invisible'
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+            <Link
+              href="/"
+              className={`text-3xl font-semibold text-[#142929] hover:text-[#4A7C7E] transition-all duration-300 ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '100ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className={`text-3xl font-semibold text-[#142929] hover:text-[#4A7C7E] transition-all duration-300 ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '200ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              href="/about"
+              className={`text-3xl font-semibold text-[#142929] hover:text-[#4A7C7E] transition-all duration-300 ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '300ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-3xl font-semibold text-[#142929] hover:text-[#4A7C7E] transition-all duration-300 ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '400ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <Link
+              href="/book-call"
+              className={`mt-4 px-8 py-3.5 rounded-full text-xl font-semibold text-center transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '500ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Book a Call
+            </Link>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );
