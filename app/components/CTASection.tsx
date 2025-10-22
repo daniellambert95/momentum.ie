@@ -7,7 +7,7 @@ const CTASection = () => {
     <section className="bg-[#F5E6D3] py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Value Proposition */}
-        <div className="max-w-5xl mx-auto mb-24">
+        <div className="max-w-4xl mx-auto mb-24">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center leading-tight text-[#142929] mb-12">
             FROM NATIONAL RETAILERS TO INDEPENDENT SHOPS
           </h2>
