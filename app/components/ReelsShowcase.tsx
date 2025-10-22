@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { FiPlay, FiPause } from 'react-icons/fi';
 
 interface Reel {
@@ -13,31 +13,8 @@ interface Reel {
 }
 
 const ReelsShowcase = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          setDarkMode(isDark);
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
 
   const reels: Reel[] = [
     {
@@ -87,18 +64,18 @@ const ReelsShowcase = () => {
   };
 
   return (
-    <section id="our-work" className="py-20 relative overflow-hidden bg-gradient-to-br from-[#357a67]/10 via-primary/5 to-[#0e7490]/10">
+    <section id="our-work" className="py-20 relative overflow-hidden bg-[#F5E6D3]">
       {/* Background elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#0e7490]/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-[#C8D5B9]/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#D4E7C5]/20 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="gradient-text font-extrabold">Reels</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#142929]">
+            FEATURED REELS
           </h2>
-          <p className={`text-lg md:text-xl ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className="text-lg md:text-xl text-[#142929]/70">
             See our latest work in action. From national brands to local stories, we create content that connects.
           </p>
         </div>
@@ -108,9 +85,7 @@ const ReelsShowcase = () => {
           {reels.map((reel) => (
             <div
               key={reel.id}
-              className={`group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              }`}
+              className="group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white"
             >
               {reel.type === 'local' && reel.src ? (
                 <div className="relative aspect-[9/16] bg-black">
@@ -132,9 +107,9 @@ const ReelsShowcase = () => {
                   >
                     <button className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
                       {playingVideo === reel.id ? (
-                        <FiPause className="w-8 h-8 text-primary" />
+                        <FiPause className="w-8 h-8 text-[#142929]" />
                       ) : (
-                        <FiPlay className="w-8 h-8 text-primary ml-1" />
+                        <FiPlay className="w-8 h-8 text-[#142929] ml-1" />
                       )}
                     </button>
                   </div>

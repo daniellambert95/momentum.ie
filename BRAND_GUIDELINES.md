@@ -13,57 +13,57 @@ Momentum is a content creation agency based in County Wicklow, Ireland, speciali
 
 ## Color Palette
 
-### Primary Colors (Outdoor/Nature-Inspired)
+### Primary Colors (Soft Pastel Palette)
 
-#### Forest Green (Primary)
-- **Hex**: `#047857` (Emerald-700)
-- **RGB**: `4, 120, 87`
-- **Use**: Primary brand color, CTAs, accents
-- **Inspiration**: Irish forests, outdoor landscapes
+#### Deep Forest Green (Primary)
+- **Hex**: `#142929`
+- **RGB**: `20, 41, 41`
+- **Use**: Primary brand color, text, main accents
+- **Inspiration**: Deep forest shadows, rich earth
 
-#### Teal/Cyan (Secondary)
-- **Hex**: `#0e7490` (Cyan-700)
-- **RGB**: `14, 116, 144`
-- **Use**: Secondary accents, gradients, interactive elements
-- **Inspiration**: Irish coastline, fresh water
+#### Soft Sage (Secondary)
+- **Hex**: `#C8D5B9`
+- **RGB**: `200, 213, 185`
+- **Use**: Background accents, soft highlights
+- **Inspiration**: Soft sage leaves, misty mornings
 
-#### Sage Green (Accent)
-- **Hex**: `#357a67`
-- **RGB**: `53, 122, 103`
-- **Use**: Backgrounds, sections, subtle accents
-- **Inspiration**: Natural landscapes, mossy stone
+#### Pastel Mint
+- **Hex**: `#D4E7C5`
+- **RGB**: `212, 231, 197`
+- **Use**: Light backgrounds, decorative elements
+- **Inspiration**: Fresh spring meadows
 
-#### Moss Green (Accent Light)
-- **Hex**: `#10b981` (Emerald-500)
-- **RGB**: `16, 185, 129`
-- **Use**: Hover states, lighter accents
-- **Inspiration**: Fresh spring growth
+#### Muted Teal
+- **Hex**: `#4A7C7E`
+- **RGB**: `74, 124, 126`
+- **Use**: Secondary accents, hover states
+- **Inspiration**: Calm coastal waters
 
-### Earthy Browns (Added)
+### Earthy Browns (Soft Pastels)
 
-#### Warm Earth (Primary Brown)
-- **Hex**: `#8B4513` (Saddle Brown)
-- **RGB**: `139, 69, 19`
-- **Use**: Accents, borders, typography highlights
-- **Inspiration**: Irish peat, rich soil, tree bark
+#### Warm Taupe
+- **Hex**: `#A89F91`
+- **RGB**: `168, 159, 145`
+- **Use**: Text accents, subtle borders
+- **Inspiration**: Weathered stone, natural clay
 
-#### Terracotta
-- **Hex**: `#A0522D` (Sienna)
-- **RGB**: `160, 82, 45`
-- **Use**: Secondary accents, warm highlights
-- **Inspiration**: Clay pottery, sunset earth tones
+#### Soft Terracotta
+- **Hex**: `#D4A5A5`
+- **RGB**: `212, 165, 165`
+- **Use**: Warm accents, highlights
+- **Inspiration**: Soft clay pottery
 
-#### Warm Sand
-- **Hex**: `#DEB887` (Burlywood)
-- **RGB**: `222, 184, 135`
-- **Use**: Light backgrounds, hover states
-- **Inspiration**: Irish beaches, sand dunes
+#### Cream Sand
+- **Hex**: `#F5E6D3`
+- **RGB**: `245, 230, 211`
+- **Use**: Light backgrounds, cards
+- **Inspiration**: Soft sand dunes, parchment
 
-#### Deep Earth
-- **Hex**: `#654321` (Dark Brown)
-- **RGB**: `101, 67, 33`
-- **Use**: Text, dark accents, borders
-- **Inspiration**: Rich Irish soil, coffee
+#### Dusty Rose Brown
+- **Hex**: `#C9ADA7`
+- **RGB**: `201, 173, 167`
+- **Use**: Subtle accents, soft borders
+- **Inspiration**: Dried flowers, soft earth
 
 ### Neutral Colors
 
@@ -82,23 +82,23 @@ Momentum is a content creation agency based in County Wicklow, Ireland, speciali
 
 ### Gradient Combinations
 ```css
-/* Primary Gradient (Green to Teal) */
-background: linear-gradient(135deg, #047857 0%, #0e7490 100%);
+/* Primary Soft Gradient (Sage to Mint) */
+background: linear-gradient(135deg, #C8D5B9 0%, #D4E7C5 100%);
 
-/* Outdoor Gradient (Sage to Forest) */
-background: linear-gradient(135deg, #357a67 0%, #047857 100%);
+/* Deep to Soft (Forest to Sage) */
+background: linear-gradient(135deg, #142929 0%, #4A7C7E 50%, #C8D5B9 100%);
 
-/* Earth Gradient (Brown to Green) */
-background: linear-gradient(135deg, #8B4513 0%, #047857 50%, #357a67 100%);
+/* Warm Pastel (Cream to Terracotta) */
+background: linear-gradient(135deg, #F5E6D3 0%, #D4A5A5 100%);
 
-/* Warm Earth Gradient */
-background: linear-gradient(135deg, #654321 0%, #8B4513 50%, #A0522D 100%);
+/* Natural Blend (Mint to Taupe) */
+background: linear-gradient(135deg, #D4E7C5 0%, #C9ADA7 100%);
 
-/* Natural Blend (Green, Brown, Teal) */
-background: linear-gradient(135deg, #357a67 0%, #8B4513 50%, #0e7490 100%);
+/* Earth Tones (Sand to Rose Brown) */
+background: linear-gradient(135deg, #F5E6D3 0%, #C9ADA7 50%, #A89F91 100%);
 
-/* Sunset Earth */
-background: linear-gradient(135deg, #DEB887 0%, #A0522D 50%, #8B4513 100%);
+/* Soft Hero Gradient (Sage with Terracotta accents) */
+background: linear-gradient(135deg, #C8D5B9 0%, #D4E7C5 50%, #D4A5A5 100%);
 ```
 
 ---

@@ -15,17 +15,14 @@ const SlideShowcase = () => {
   }));
 
   return (
-    <section
-      className="py-16"
-      style={{ backgroundColor: "#357a67" }}
-    >
+    <section className="py-16 bg-[#142929]">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Left: Big Bold Text */}
         <div className="flex-1 text-center md:text-left mb-8 md:mb-0">
-          <h2 className="text-5xl font-extrabold text-white mb-6">Our Journey</h2>
-          <p className="text-2xl font-semibold text-white max-w-md mx-auto md:mx-0">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#C8D5B9] mb-6">OUR JOURNEY</h2>
+          <p className="text-xl sm:text-2xl font-semibold text-[#C8D5B9]/80 max-w-md mx-auto md:mx-0">
             Discover the moments that define us. <br />
-            <span className="text-gray-100 font-bold">
+            <span className="text-[#C8D5B9] font-bold">
               Experience the story behind every image.
             </span>
           </p>

@@ -132,7 +132,19 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.font-heading {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 .font-ultra {
@@ -209,6 +221,15 @@ body {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
@@ -245,6 +266,10 @@ body {
 .animate-blur-in-up {
   animation: blurInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }
 
 /* Navbar styles */

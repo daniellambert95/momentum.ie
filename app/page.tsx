@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import HeroBlurb from './components/HeroBlurb';
+import CTASection from './components/CTASection';
 import Services from './components/Services';
 import PreAnimation from './components/PreAnimation';
 import AboutUsVideo from './components/AboutUsVideo';
@@ -23,12 +23,12 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {!showContent && <PreAnimation onComplete={handleAnimationComplete} />}
-      
+
       {showContent && (
         <>
           <Navbar />
           <Hero />
-          <HeroBlurb />
+          <CTASection />
           <Services />
           <ReelsShowcase />
           <ClientsCollaborations />

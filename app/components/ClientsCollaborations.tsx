@@ -1,32 +1,8 @@
 "use client";
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const ClientsCollaborations = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          setDarkMode(isDark);
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
 
   // Client logos - uncomment when you have logo files
   // const clients = [
@@ -37,21 +13,21 @@ const ClientsCollaborations = () => {
   // ];
 
   return (
-    <section className={`py-20 relative overflow-hidden ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+    <section className="py-20 relative overflow-hidden bg-white">
       {/* Background elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#0e7490]/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#C8D5B9]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4E7C5]/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Clients & <span className="gradient-text font-extrabold">Collaborations</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#142929]">
+            CLIENTS & COLLABORATIONS
           </h2>
-          <p className={`text-lg md:text-xl leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className="text-lg md:text-xl leading-relaxed text-[#142929]/70">
             We work with brands and independents that care about community, creativity, and quality.
           </p>
-          <p className={`text-base md:text-lg mt-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          <p className="text-base md:text-lg mt-4 text-[#142929]/60">
             Our work includes projects with SuperValu, Centra, Musgrave, AMOC Jewellery, and independent retailers across Ireland.
           </p>
         </div>
@@ -82,39 +58,37 @@ const ClientsCollaborations = () => {
             {
               title: 'National Retailers',
               description: 'Campaign content for SuperValu and Centra stores across Ireland',
-              color: 'from-primary to-[#357a67]'
+              bgColor: 'bg-[#C8D5B9]/20'
             },
             {
               title: 'Independent Shops',
               description: 'Story-driven content for local businesses and community brands',
-              color: 'from-[#0e7490] to-primary'
+              bgColor: 'bg-[#D4E7C5]/20'
             },
             {
               title: 'Lifestyle Brands',
               description: 'Product photography and social content for emerging Irish brands',
-              color: 'from-[#357a67] to-[#0e7490]'
+              bgColor: 'bg-[#F5E6D3]/40'
             }
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              }`}
+              className="group relative p-8 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-white border-2 border-transparent hover:border-[#C8D5B9]"
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+              {/* Background overlay on hover */}
+              <div className={`absolute inset-0 ${item.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
 
               <div className="relative z-10">
-                <h3 className={`text-xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                <h3 className="text-xl font-bold mb-3 text-[#142929]">
                   {item.title}
                 </h3>
-                <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className="text-[#142929]/60">
                   {item.description}
                 </p>
               </div>
 
               {/* Decorative element */}
-              <div className={`absolute bottom-4 right-4 w-16 h-16 bg-gradient-to-br ${item.color} rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+              <div className="absolute bottom-4 right-4 w-16 h-16 bg-[#142929] rounded-full opacity-5 group-hover:opacity-10 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>

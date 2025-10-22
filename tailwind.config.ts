@@ -8,15 +8,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#047857',
-        'primary-light': '#10b981',
-        'primary-dark': '#065f46',
-        'brand-green': '#357a67',
-        'brand-green-light': '#dcfce7',
-        'brand-green-dark': '#16a34a',
+        'primary': '#142929',
+        'primary-light': '#4A7C7E',
+        'primary-dark': '#0A1515',
+        'brand-sage': '#C8D5B9',
+        'brand-mint': '#D4E7C5',
+        'brand-cream': '#F5E6D3',
+        'brand-terracotta': '#D4A5A5',
+        'brand-taupe': '#A89F91',
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #047857, #0e7490)',
+        'gradient-primary': 'linear-gradient(135deg, #142929, #4A7C7E)',
+        'gradient-pastel': 'linear-gradient(135deg, #C8D5B9, #D4E7C5)',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-bebas-neue)', 'Bebas Neue', 'system-ui', 'sans-serif'],
       },
     },
   },

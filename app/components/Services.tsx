@@ -1,34 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FiVideo, FiCamera, FiMessageSquare, FiTrendingUp, FiEdit3, FiUsers } from "react-icons/fi";
 
 const Services = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [activeService, setActiveService] = useState<number | null>(null);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-
-    // Setup observer to watch for dark mode changes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          const isDark = document.documentElement.classList.contains('dark');
-          setDarkMode(isDark);
-        }
-      });
-    });
-
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => observer.disconnect();
-  }, []);
 
   const services = [
     {
@@ -70,37 +46,37 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-white">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary-light/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#0e7490]/10 rounded-full blur-3xl"></div>
-      
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#C8D5B9]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D4E7C5]/10 rounded-full blur-3xl"></div>
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">
-            What We <span className="gradient-text font-extrabold">Do</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#142929]">
+            WHAT WE DO
           </h2>
-          <p className={`text-lg md:text-xl ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+          <p className="text-lg md:text-xl text-[#142929]/70">
             We craft impactful visual content that feels real — built around people, places, and purpose.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div 
+            <div
               key={service.id}
-              className={`service-card group p-6 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}
+              className="service-card group p-6 text-[#142929]"
               onMouseEnter={() => setActiveService(service.id)}
               onMouseLeave={() => setActiveService(null)}
             >
               <div className="mb-4 relative">
-                <div className="w-16 h-16 rounded-full gradient-bg flex items-center justify-center text-white transform group-hover:-translate-y-1 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-full bg-[#142929] flex items-center justify-center text-[#C8D5B9] transform group-hover:-translate-y-1 group-hover:bg-[#4A7C7E] transition-all duration-300">
                   {service.icon}
                 </div>
-                <div className={`absolute inset-0 bg-primary-light rounded-full scale-0 opacity-0 group-hover:scale-[1.8] group-hover:opacity-20 transition-all duration-500 ease-out ${activeService === service.id ? 'animate-pulse' : ''}`}></div>
+                <div className={`absolute inset-0 bg-[#C8D5B9] rounded-full scale-0 opacity-0 group-hover:scale-[1.8] group-hover:opacity-20 transition-all duration-500 ease-out ${activeService === service.id ? 'animate-pulse' : ''}`}></div>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-              <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} leading-relaxed`}>{service.description}</p>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-[#4A7C7E] transition-colors duration-300">{service.title}</h3>
+              <p className="text-[#142929]/60 leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>
