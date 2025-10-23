@@ -139,9 +139,22 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Copyright */}
-            <p className="text-[#C8D5B9]/60 text-sm">
-              © {currentYear} Momentum. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-2">
+              <p className="text-[#C8D5B9]/60 text-sm">
+                © {currentYear} Momentum. All rights reserved.
+              </p>
+              <p className="text-[#C8D5B9]/60 text-sm">
+                Web Design by{' '}
+                <a
+                  href="https://www.siteandsight.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#C8D5B9] hover:text-[#D4E7C5] transition-colors font-medium underline decoration-[#C8D5B9]/40 hover:decoration-[#D4E7C5]"
+                >
+                  Site&Sight
+                </a>
+              </p>
+            </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4">

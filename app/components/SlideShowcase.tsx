@@ -46,6 +46,8 @@ const SlideShowcase = () => {
               spaceBetween={20}
               navigation={true}
               modules={[Navigation]}
+              initialSlide={0}
+              autoplay={false}
               className="main-swiper rounded-2xl shadow-2xl"
             >
               {slides.map((slide) => (
