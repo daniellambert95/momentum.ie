@@ -63,9 +63,8 @@ export default function BookCallPage() {
                     placeholder="Brief description of what you'd like to discuss"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary w-full relative overflow-hidden group">
-                  <span className="relative z-10">Schedule Call</span>
-                  <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+                <button type="submit" className="w-full px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl">
+                  Schedule Call
                 </button>
               </form>
             </div>

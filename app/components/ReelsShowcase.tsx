@@ -21,7 +21,7 @@ const ReelsShowcase = () => {
       id: 1,
       type: 'local',
       src: '/videos/reels/centra-promotion-video-1.mp4',
-      title: 'Centra Promotion'
+      title: 'Centra Summer Sizzlers'
     },
     {
       id: 2,
@@ -42,6 +42,27 @@ const ReelsShowcase = () => {
     //   embedUrl: 'https://www.instagram.com/reel/ABC123/embed',
     //   title: 'Instagram Reel'
     // }
+  ];
+
+  const stats = [
+    {
+      value: '1.3M',
+      label: 'Views',
+      campaign: "St Patrick's Day",
+      color: 'from-[#C8D5B9] to-[#D4E7C5]'
+    },
+    {
+      value: '300K',
+      label: 'Views',
+      campaign: 'Summer Sizzlers',
+      color: 'from-[#D4E7C5] to-[#C9ADA7]'
+    },
+    {
+      value: '230K',
+      label: 'Views',
+      campaign: 'West Coast Cooler',
+      color: 'from-[#C9ADA7] to-[#D4A5A5]'
+    }
   ];
 
   const togglePlay = (id: number) => {
@@ -80,69 +101,92 @@ const ReelsShowcase = () => {
           </p>
         </div>
 
-        {/* Reels Grid */}
+        {/* Reels with Integrated Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {reels.map((reel) => (
-            <div
-              key={reel.id}
-              className="group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white"
-            >
-              {reel.type === 'local' && reel.src ? (
-                <div className="relative aspect-[9/16] bg-black">
-                  <video
-                    ref={(el) => { videoRefs.current[reel.id] = el; }}
-                    className="w-full h-full object-contain"
-                    loop
-                    playsInline
-                    onEnded={() => setPlayingVideo(null)}
-                  >
-                    <source src={reel.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+          {reels.map((reel, index) => {
+            const matchingStat = stats[index];
+            return (
+              <div
+                key={reel.id}
+                className="group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 bg-white"
+              >
+                {/* Stats Badge - Positioned at top right */}
+                {matchingStat && (
+                  <div className="absolute top-4 right-4 z-30 pointer-events-none">
+                    <div className={`bg-gradient-to-br ${matchingStat.color} rounded-xl px-4 py-3 shadow-lg`}>
+                      <div className="text-center">
+                        <div className="text-2xl font-black text-white">
+                          {matchingStat.value}
+                        </div>
+                        <div className="text-xs font-semibold text-white/90 uppercase">
+                          {matchingStat.label}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
-                  {/* Play/Pause Overlay */}
-                  <div
-                    className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                    onClick={() => togglePlay(reel.id)}
-                  >
-                    <button className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
-                      {playingVideo === reel.id ? (
-                        <FiPause className="w-8 h-8 text-[#142929]" />
-                      ) : (
-                        <FiPlay className="w-8 h-8 text-[#142929] ml-1" />
+                {reel.type === 'local' && reel.src ? (
+                  <div className="relative aspect-[9/16] bg-black">
+                    <video
+                      ref={(el) => { videoRefs.current[reel.id] = el; }}
+                      className="w-full h-full object-contain"
+                      loop
+                      playsInline
+                      onEnded={() => setPlayingVideo(null)}
+                    >
+                      <source src={reel.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    {/* Play/Pause Overlay */}
+                    <div
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                      onClick={() => togglePlay(reel.id)}
+                    >
+                      <button className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
+                        {playingVideo === reel.id ? (
+                          <FiPause className="w-8 h-8 text-[#142929]" />
+                        ) : (
+                          <FiPlay className="w-8 h-8 text-[#142929] ml-1" />
+                        )}
+                      </button>
+                    </div>
+
+                    {/* Title Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                      <h3 className="text-white font-semibold text-lg">{reel.title}</h3>
+                      {matchingStat && (
+                        <p className="text-[#C8D5B9] text-sm font-medium mt-1">
+                          {matchingStat.campaign}
+                        </p>
                       )}
-                    </button>
+                    </div>
                   </div>
-
-                  {/* Title Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <h3 className="text-white font-semibold text-lg">{reel.title}</h3>
+                ) : reel.type === 'instagram' && reel.embedUrl ? (
+                  <div className="relative aspect-[9/16]">
+                    <iframe
+                      src={reel.embedUrl}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      scrolling="no"
+                      allowTransparency
+                      allow="encrypted-media"
+                    ></iframe>
                   </div>
-                </div>
-              ) : reel.type === 'instagram' && reel.embedUrl ? (
-                <div className="relative aspect-[9/16]">
-                  <iframe
-                    src={reel.embedUrl}
-                    className="w-full h-full"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency
-                    allow="encrypted-media"
-                  ></iframe>
-                </div>
-              ) : null}
-            </div>
-          ))}
+                ) : null}
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA */}
         <div className="mt-16 text-center">
           <a
             href="/contact"
-            className="btn-primary inline-flex items-center space-x-2 group"
+            className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#4A7C7E] text-[#F5E6D3] hover:bg-[#142929] hover:scale-105 hover:shadow-xl inline-block"
           >
-            <span>Let&apos;s Create Together</span>
-            
+            Let&apos;s Create Together
           </a>
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#F5E6D3]/95 backdrop-blur-md shadow-md'
+          ? 'bg-[#142929]/95 backdrop-blur-md shadow-md'
           : 'bg-transparent'
       }`}
     >
@@ -32,25 +32,41 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6 flex-1">
             <Link
               href="/"
-              className="font-medium transition-colors text-[#142929] hover:text-[#4A7C7E]"
+              className={`font-medium transition-colors ${
+                isScrolled
+                  ? 'text-[#C8D5B9] hover:text-[#D4E7C5]'
+                  : 'text-[#142929] hover:text-[#4A7C7E]'
+              }`}
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="font-medium transition-colors text-[#142929] hover:text-[#4A7C7E]"
+              className={`font-medium transition-colors ${
+                isScrolled
+                  ? 'text-[#C8D5B9] hover:text-[#D4E7C5]'
+                  : 'text-[#142929] hover:text-[#4A7C7E]'
+              }`}
             >
               Services
             </Link>
             <Link
               href="/about"
-              className="font-medium transition-colors text-[#142929] hover:text-[#4A7C7E]"
+              className={`font-medium transition-colors ${
+                isScrolled
+                  ? 'text-[#C8D5B9] hover:text-[#D4E7C5]'
+                  : 'text-[#142929] hover:text-[#4A7C7E]'
+              }`}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="font-medium transition-colors text-[#142929] hover:text-[#4A7C7E]"
+              className={`font-medium transition-colors ${
+                isScrolled
+                  ? 'text-[#C8D5B9] hover:text-[#D4E7C5]'
+                  : 'text-[#142929] hover:text-[#4A7C7E]'
+              }`}
             >
               Contact
             </Link>
@@ -59,7 +75,9 @@ export default function Navbar() {
           {/* Logo - Centered on Desktop, Left on Mobile */}
           <Link href="/" className="flex items-center gap-2 group md:flex-1 md:justify-center">
             <Logo />
-            <span className="text-2xl font-bold transition-colors text-[#142929]">
+            <span className={`text-2xl font-bold transition-colors ${
+              isScrolled ? 'text-[#C8D5B9]' : 'text-[#142929]'
+            }`}>
               Momentum
             </span>
           </Link>
@@ -68,7 +86,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4 flex-1 justify-end">
             <Link
               href="/book-call"
-              className="px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E]"
+              className={`px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg ${
+                isScrolled
+                  ? 'bg-[#C8D5B9] text-[#142929] hover:bg-[#D4E7C5]'
+                  : 'bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E]'
+              }`}
             >
               Book a Call
             </Link>
@@ -78,7 +100,11 @@ export default function Navbar() {
           <div className="flex md:hidden items-center ml-auto">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-md transition-colors text-[#142929] hover:bg-[#C8D5B9]/30 z-50 relative"
+              className={`p-2 rounded-md transition-colors z-50 relative ${
+                isScrolled
+                  ? 'text-[#C8D5B9] hover:bg-[#C8D5B9]/20'
+                  : 'text-[#142929] hover:bg-[#C8D5B9]/30'
+              }`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (

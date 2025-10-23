@@ -272,6 +272,19 @@ h1, h2, h3, h4, h5, h6 {
   animation: scroll 30s linear infinite;
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
 /* Navbar styles */
 .navbar-light {
   background-color: #f8f9fa;
@@ -286,14 +299,12 @@ h1, h2, h3, h4, h5, h6 {
 @layer tw.base {
   .btn-primary {
     display: inline-block;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    background-image: linear-gradient(135deg, var(--gradient-start), var(--primary-light), var(--gradient-end));
-    color: white;
+    padding: 1rem 2rem;
+    background-color: #142929;
+    color: #F5E6D3;
     font-weight: 600;
-    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    border-radius: 9999px;
     text-align: center;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -301,65 +312,76 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .btn-primary:hover {
-    --tw-shadow: 0 10px 25px -5px rgb(4 120 87 / 0.4), 0 8px 10px -6px rgb(4 120 87 / 0.3);
-    --tw-shadow-colored: 0 10px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    background-color: #4A7C7E;
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     transform: scale(1.05);
   }
 
   .btn-secondary {
     display: inline-block;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
     border-width: 2px;
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: #142929;
+    color: #142929;
     font-weight: 600;
+    font-size: 1.125rem;
     text-align: center;
+    background-color: transparent;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
   }
 
   .btn-secondary:hover {
-    background: linear-gradient(135deg, var(--gradient-start), var(--sage-green));
-    color: white;
-    border-color: transparent;
+    background-color: #142929;
+    color: #F5E6D3;
+    border-color: #142929;
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     transform: scale(1.05);
   }
 }
 
 .dark .btn-primary {
-  background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  background-color: #142929;
+  color: #F5E6D3;
+}
+
+.dark .btn-primary:hover {
+  background-color: #4A7C7E;
 }
 
 .dark .btn-secondary {
-  border-color: var(--primary-light);
-  color: var(--primary-light);
+  border-color: #F5E6D3;
+  color: #F5E6D3;
 }
 
 .dark .btn-secondary:hover {
-  background-image: linear-gradient(135deg, var(--primary-light), var(--gradient-end));
-  border-color: transparent;
+  background-color: #F5E6D3;
+  color: #142929;
+  border-color: #F5E6D3;
 }
 
 /* Card styles */
 .service-card {
   border-radius: 1rem;
   overflow: hidden;
-  background-color: var(--card-bg);
+  background: linear-gradient(135deg, rgba(200, 213, 185, 0.2) 0%, rgba(212, 231, 197, 0.25) 100%);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 213, 185, 0.3);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, rgba(200, 213, 185, 0.4) 0%, rgba(212, 231, 197, 0.5) 100%);
+  border: 1px solid rgba(200, 213, 185, 0.5);
 }
 
 .dark .service-card {

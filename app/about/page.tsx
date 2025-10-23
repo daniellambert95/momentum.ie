@@ -61,9 +61,9 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto mt-16 text-center">
           <Link
             href="/#our-work"
-            className="btn-primary inline-flex items-center space-x-2 group"
+            className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block"
           >
-            <span>See Our Work</span>
+            See Our Work
           </Link>
         </div>
       </div>

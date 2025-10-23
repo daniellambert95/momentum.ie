@@ -29,9 +29,8 @@ export default function ContactPage() {
             </div>
             
             <div className="mt-12">
-              <Link href="/book-call" className="btn-primary inline-flex items-center space-x-2 group relative overflow-hidden">
-                <span className="relative z-10">Get In Touch</span>
-                <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              <Link href="/book-call" className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block">
+                Get In Touch
               </Link>
             </div>
           </div>
@@ -66,7 +65,7 @@ export default function ContactPage() {
                   placeholder="Your message"
                 ></textarea>
               </div>
-              <button type="submit" className="btn-primary w-full">Send Message</button>
+              <button type="submit" className="w-full px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl">Send Message</button>
             </form>
           </div>
         </div>

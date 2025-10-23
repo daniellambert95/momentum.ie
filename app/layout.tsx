@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     description: "We create authentic, story-driven video and photo content for brands and local businesses across Ireland.",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
