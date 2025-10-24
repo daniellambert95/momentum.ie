@@ -1,10 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { FiVideo, FiCamera, FiMessageSquare, FiTrendingUp, FiEdit3, FiUsers } from "react-icons/fi";
 
 const Services = () => {
-  const [activeService, setActiveService] = useState<number | null>(null);
 
   const services = [
     {
@@ -66,8 +64,6 @@ const Services = () => {
             <div
               key={service.id}
               className="group relative p-8 rounded-2xl bg-white border-2 border-[#C8D5B9] hover:border-[#4A7C7E] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              onMouseEnter={() => setActiveService(service.id)}
-              onMouseLeave={() => setActiveService(null)}
             >
               {/* Background gradient on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#C8D5B9]/5 to-[#D4E7C5]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
