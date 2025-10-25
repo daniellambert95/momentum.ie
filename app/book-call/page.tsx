@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
+import Footer from '../components/Footer';
 
 export default function BookCallPage() {
   return (
@@ -85,6 +86,7 @@ export default function BookCallPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 } 

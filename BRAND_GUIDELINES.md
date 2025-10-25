@@ -108,12 +108,15 @@ background: linear-gradient(135deg, #C8D5B9 0%, #D4E7C5 50%, #D4A5A5 100%);
 ### Font Family
 - **Primary**: Inter (Google Fonts)
 - **Weights**: 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold), 800 (Extrabold), 900 (Black)
+- **Display/Hero**: Lexend Deca (Google Fonts)
+- **Weights**: 700 (Bold) - Used for main hero headings and impact statements
 
 ### Heading Styles
-- **H1**: 3.5rem - 5rem (56px - 80px), Black (900), Tight tracking
-- **H2**: 2.5rem - 4rem (40px - 64px), Bold (700)
-- **H3**: 1.5rem - 2rem (24px - 32px), Semibold (600)
-- **Body**: 1rem - 1.125rem (16px - 18px), Regular (400)
+- **H1 (Hero)**: 3.5rem - 5rem (56px - 80px), Lexend Deca Bold (700), Tight tracking
+- **H1 (Standard)**: 3.5rem - 5rem (56px - 80px), Inter Black (900), Tight tracking
+- **H2**: 2.5rem - 4rem (40px - 64px), Inter Bold (700)
+- **H3**: 1.5rem - 2rem (24px - 32px), Inter Semibold (600)
+- **Body**: 1rem - 1.125rem (16px - 18px), Inter Regular (400)
 
 ---
 

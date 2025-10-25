@@ -1,10 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const fullText = "CONTENT THAT CONNECTS";
+
+  useEffect(() => {
+    if (displayedText.length < fullText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(fullText.slice(0, displayedText.length + 1));
+      }, 80); // Speed of typing (80ms per character)
+      return () => clearTimeout(timeout);
+    } else {
+      // Typing is complete, trigger the rest of the content to fade in
+      setIsTypingComplete(true);
+    }
+  }, [displayedText]);
 
   return (
     <>
@@ -46,15 +61,16 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col space-y-5 md:space-y-8 text-center items-center">
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight animate-fade-in-delayed text-[#142929]">
-              CONTENT THAT CONNECTS
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl pt-16 tracking-tight text-[#142929] min-h-[1.2em]" style={{ fontFamily: 'var(--font-lexend-deca)', fontWeight: 700 }}>
+              {displayedText}
+              <span className={`inline-block w-[0.05em] h-[0.9em] ml-1 bg-[#142929] align-middle ${isTypingComplete ? 'opacity-0' : 'animate-cursor-blink'}`}></span>
             </h1>
 
-            <p className="text-base sm:text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in-delayed-more text-[#142929]/70 font-medium pt-2 md:pt-4">
+            <p className="text-base sm:text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in-delayed text-[#142929]/70 font-medium pt-2 md:pt-4">
               Authentic, story-driven video and photo content for brands and local businesses across Ireland
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 pt-3 md:pt-8 animate-fade-in-delayed-most">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 pt-3 md:pt-8 animate-fade-in-delayed-more">
               <Link
                 href="#our-work"
                 className="px-8 py-3 md:px-10 md:py-4 text-base md:text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:shadow-xl hover:scale-105"

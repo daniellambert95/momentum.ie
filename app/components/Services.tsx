@@ -1,6 +1,6 @@
 "use client";
 
-import { FiVideo, FiCamera, FiMessageSquare, FiTrendingUp, FiEdit3, FiUsers } from "react-icons/fi";
+import { FiVideo, FiCamera, FiMessageSquare, FiTrendingUp, FiEdit3, FiUsers, FiCalendar } from "react-icons/fi";
 
 const Services = () => {
 
@@ -25,18 +25,24 @@ const Services = () => {
     },
     {
       id: 4,
+      title: "Content Management",
+      icon: <FiCalendar className="w-8 h-8" />,
+      description: "Let us handle the heavy lifting. Our content management service ensures your posts are scheduled, your campaigns are on track, and your messaging stays consistent. We'll manage everything from publishing to performance monitoring, so you can focus on growing your business."
+    },
+    {
+      id: 5,
       title: "Social Media Consultancy",
       icon: <FiTrendingUp className="w-8 h-8" />,
       description: "We help businesses develop clear content strategies, refine their tone of voice, and plan consistent posting that converts. Whether you manage your own social or want to strengthen your approach, we guide you with clarity and direction."
     },
     {
-      id: 5,
+      id: 6,
       title: "Graphic Design",
       icon: <FiEdit3 className="w-8 h-8" />,
       description: "Led by our designer Adam, we craft bold, cohesive visuals that tie everything together - from social graphics and packaging to menus, posters, and campaign materials. Our design work ensures your brand looks as good as it feels."
     },
     {
-      id: 6,
+      id: 7,
       title: "Brand & Community Storytelling",
       icon: <FiUsers className="w-8 h-8" />,
       description: "We bring out the human side of your brand, creating connection through story — from local businesses to national campaigns."

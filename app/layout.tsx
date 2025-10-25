@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Bebas_Neue, Lexend_Deca } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,6 +13,13 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
   display: "swap",
   weight: ["400"],
+});
+
+const lexendDeca = Lexend_Deca({
+  subsets: ["latin"],
+  variable: "--font-lexend-deca",
+  display: "swap",
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
@@ -39,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${bebasNeue.variable} antialiased`}>
+      <body className={`${inter.variable} ${bebasNeue.variable} ${lexendDeca.variable} antialiased`}>
         {children}
       </body>
     </html>

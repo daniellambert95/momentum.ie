@@ -25,9 +25,11 @@ const AboutUs = () => {
             <span className="inline-block text-sm font-semibold tracking-wider text-primary-light uppercase mt-12 mb-3">About Momentum</span>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-primary dark:text-gray-200">We help your content work harder for you</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-            From brainstorming ideas to creating, posting, and managing your content, we keep it simple, effective, and stress-free. Local impact, national reach.
-
-Whatever you need, we&apos;ve got your back.
+            From brainstorming ideas to creating, posting, and managing your content, we keep it simple, effective, and stress-free. Local impact, national reach. 
+            Whatever you need, we&apos;ve got your back.
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              We specialise in creating authentic, story-driven video and photo content for brands and local businesses — the kind of content that connects with people, not just algorithms.
             </p>
             
             <ul className="space-y-6 mb-8">

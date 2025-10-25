@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Services from '../components/Services';
+import Footer from '../components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -8,6 +9,7 @@ export default function ServicesPage() {
       <div className="py-12">
         <Services />
       </div>
+      <Footer />
     </main>
   );
 } 
