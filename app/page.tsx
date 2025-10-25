@@ -2,6 +2,7 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import BrandsSection from './components/BrandsSection';
 import CTASection from './components/CTASection';
 import Services from './components/Services';
 import AboutUsVideo from './components/AboutUsVideo';
@@ -21,6 +22,7 @@ export default function Home() {
           <Navbar />
           <Hero />
           <CTASection />
+          <BrandsSection />
           <Services />
           <ReelsShowcase />
           <ClientsCollaborations />
