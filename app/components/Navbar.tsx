@@ -126,7 +126,7 @@ export default function Navbar() {
               ? 'opacity-100 visible'
               : 'opacity-0 invisible'
           }`}
-          style={{ height: '100vh', height: '100dvh' }}
+          style={{ height: '100dvh' }}
         >
           <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-6 pt-20">
             <Link
