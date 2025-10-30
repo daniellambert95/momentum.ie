@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar';
-import Link from 'next/link';
 import Footer from '../components/Footer';
 
 export default function ContactPage() {
@@ -30,9 +29,9 @@ export default function ContactPage() {
             </div>
             
             <div className="mt-12">
-              <Link href="/book-call" className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block">
+              <a href="https://calendly.com/andrewmowatt11" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block">
                 Get In Touch
-              </Link>
+              </a>
             </div>
           </div>
           

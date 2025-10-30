@@ -84,8 +84,10 @@ export default function Navbar() {
 
           {/* Right: CTA Button (Desktop) / Hamburger (Mobile) */}
           <div className="hidden md:flex items-center gap-4 flex-1 justify-end">
-            <Link
-              href="/book-call"
+            <a
+              href="https://calendly.com/andrewmowatt11"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg ${
                 isScrolled
                   ? 'bg-[#C8D5B9] text-[#142929] hover:bg-[#D4E7C5]'
@@ -93,7 +95,7 @@ export default function Navbar() {
               }`}
             >
               Book a Call
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,13 +121,14 @@ export default function Navbar() {
 
         {/* Full-Screen Mobile Menu */}
         <div
-          className={`md:hidden fixed inset-0 bg-[#F5E6D3] z-40 transition-all duration-500 ease-in-out ${
+          className={`md:hidden fixed top-0 left-0 right-0 bottom-0 bg-[#F5E6D3] z-40 transition-all duration-500 ease-in-out ${
             mobileMenuOpen
               ? 'opacity-100 visible'
               : 'opacity-0 invisible'
           }`}
+          style={{ height: '100vh', height: '100dvh' }}
         >
-          <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+          <div className="flex flex-col items-center justify-center min-h-screen gap-8 px-6 pt-20">
             <Link
               href="/"
               className={`text-3xl font-semibold text-[#142929] hover:text-[#4A7C7E] transition-all duration-300 ${
@@ -166,8 +169,10 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Link
-              href="/book-call"
+            <a
+              href="https://calendly.com/andrewmowatt11"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`mt-4 px-8 py-3.5 rounded-full text-xl font-semibold text-center transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 ${
                 mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
               }`}
@@ -175,7 +180,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         </div>
       </nav>

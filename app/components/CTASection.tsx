@@ -39,12 +39,14 @@ const CTASection = () => {
               >
                 Send Email
               </Link>
-              <Link
-                href="/book-call"
+              <a
+                href="https://calendly.com/andrewmowatt11"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 border-2 border-[#C8D5B9] text-[#C8D5B9] hover:bg-[#C8D5B9] hover:text-[#142929] hover:scale-105 hover:shadow-xl text-center"
               >
                 Schedule Meeting
-              </Link>
+              </a>
             </div>
           </div>
         </div>
