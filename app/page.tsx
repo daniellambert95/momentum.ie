@@ -5,11 +5,11 @@ import Hero from './components/Hero';
 import BrandsSection from './components/BrandsSection';
 import CTASection from './components/CTASection';
 import Services from './components/Services';
-import AboutUsVideo from './components/AboutUsVideo';
 import SlideShowcase from './components/SlideShowcase';
 import ReelsShowcase from './components/ReelsShowcase';
 import ClientsCollaborations from './components/ClientsCollaborations';
 import WorkShowcase from './components/WorkShowcase';
+import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -25,11 +25,12 @@ export default function Home() {
           <CTASection />
           <BrandsSection />
           <Services />
-          <WorkShowcase />
           <ReelsShowcase />
+          <WorkShowcase />
           <ClientsCollaborations />
           <SlideShowcase />
-          <AboutUsVideo />
+          {/* <AboutUsVideo /> */}
+          <FinalCTA />
           <Footer />
         </>
       )}

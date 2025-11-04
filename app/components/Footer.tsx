@@ -1,7 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { FiInstagram, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiInstagram, FiMail, FiMapPin } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,7 +48,7 @@ const Footer = () => {
           ></path>
           <path
             d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-            className="fill-[#F5E6D3]"
+            className="fill-white"
           ></path>
         </svg>
       </div>
@@ -79,13 +80,15 @@ const Footer = () => {
                   <span className="font-medium">andrewmowatt11@gmail.com</span>
                 </a>
                 <a
-                  href="tel:+353 87 966 2828"
+                  href="https://wa.me/353879662828"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#C8D5B9] hover:text-[#D4E7C5] transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#D4E7C5]/20 flex items-center justify-center group-hover:bg-[#D4E7C5] transition-colors">
-                    <FiPhone className="w-5 h-5" />
+                    <FaWhatsapp className="w-5 h-5" />
                   </div>
-                  <span className="font-medium">Get in Touch</span>
+                  <span className="font-medium">WhatsApp Us</span>
                 </a>
                 <div className="flex items-center gap-3 text-[#C8D5B9]">
                   <div className="w-10 h-10 rounded-full bg-[#C9ADA7]/20 flex items-center justify-center">
@@ -171,6 +174,14 @@ const Footer = () => {
                 className="w-12 h-12 rounded-full bg-[#C8D5B9] text-[#142929] flex items-center justify-center hover:bg-[#D4E7C5] hover:scale-110 transition-all duration-300 shadow-lg"
               >
                 <FiMail className="w-6 h-6" />
+              </a>
+              <a
+                href="https://wa.me/353879662828"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-[#C8D5B9] text-[#142929] flex items-center justify-center hover:bg-[#D4E7C5] hover:scale-110 transition-all duration-300 shadow-lg"
+              >
+                <FaWhatsapp className="w-6 h-6" />
               </a>
             </div>
 

@@ -8,39 +8,54 @@ const WorkShowcase = () => {
 
   const workImages = [
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.11.webp",
-      alt: "Content creation work 1",
+      src: "/momentum-work/beer-selection.webp",
+      alt: "Beer selection display",
       className: "row-span-2", // Taller
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.12.webp",
-      alt: "Content creation work 2",
+      src: "/momentum-work/birra-moretti-ireland.webp",
+      alt: "Birra Moretti Ireland",
       className: "row-span-1",
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.13.webp",
-      alt: "Content creation work 3",
+      src: "/momentum-work/centra-greystones-deal.webp",
+      alt: "Centra Greystones deal",
       className: "row-span-1",
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.13 (1).webp",
-      alt: "Content creation work 4",
+      src: "/momentum-work/centra-greystones.webp",
+      alt: "Centra Greystones",
       className: "row-span-2", // Taller
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.13 (2).webp",
-      alt: "Content creation work 5",
+      src: "/momentum-work/chef-at-work.webp",
+      alt: "Chef at work",
       className: "row-span-1",
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.14.webp",
-      alt: "Content creation work 6",
+      src: "/momentum-work/frank-and-honest-coffee-promo.webp",
+      alt: "Frank and Honest coffee promo",
       className: "row-span-1",
     },
     {
-      src: "/momentum-work/WhatsApp Image 2025-10-27 at 18.15.14 (1).webp",
-      alt: "Content creation work 7",
+      src: "/momentum-work/greystones-sunset.webp",
+      alt: "Greystones sunset",
       className: "row-span-2", // Taller
+    },
+    {
+      src: "/momentum-work/policia.jpeg",
+      alt: "Policia content",
+      className: "row-span-1",
+    },
+    {
+      src: "/momentum-work/sandwich-deli.webp",
+      alt: "Sandwich deli",
+      className: "row-span-2", // Taller
+    },
+    {
+      src: "/momentum-work/trail-running-ireland.webp",
+      alt: "Trail running Ireland",
+      className: "row-span-1",
     },
   ];
 
