@@ -38,7 +38,7 @@ const FinalCTA = () => {
             </a>
 
             <a
-              href="https://wa.me/353879662828"
+              href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-[#142929] text-[#142929] rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#142929] hover:text-[#F5E6D3] hover:scale-105 hover:shadow-2xl"

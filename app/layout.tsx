@@ -23,13 +23,51 @@ const lexendDeca = Lexend_Deca({
 });
 
 export const metadata: Metadata = {
-  title: "Momentum | Content That Connects - Video & Photo Content Ireland",
+  metadataBase: new URL('https://momentum.ie'),
+  title: {
+    default: "Momentum | Content That Connects - Video & Photo Content Ireland",
+    template: "%s | Momentum"
+  },
   description: "Authentic, story-driven video and photo content for brands and local businesses across Ireland. From national retailers to independent shops, we help businesses capture what makes them unique.",
-  keywords: ["video production Ireland", "content creation", "social media content", "photography Ireland", "brand storytelling", "County Wicklow", "digital marketing"],
+  keywords: ["video production Ireland", "content creation", "social media content", "photography Ireland", "brand storytelling", "County Wicklow", "digital marketing", "video marketing", "content agency Ireland", "social media marketing"],
+  authors: [{ name: "Momentum" }],
+  creator: "Momentum",
+  publisher: "Momentum",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://momentum.ie",
+    siteName: "Momentum",
     title: "Momentum | Content That Connects",
     description: "We create authentic, story-driven video and photo content for brands and local businesses across Ireland.",
-    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Momentum - Content Creation Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Momentum | Content That Connects",
+    description: "We create authentic, story-driven video and photo content for brands and local businesses across Ireland.",
+    images: ["/images/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://momentum.ie",
   },
 };
 

@@ -11,7 +11,6 @@ const Footer = () => {
     company: [
       { label: 'About', href: '/about' },
       { label: 'Services', href: '/services' },
-      { label: 'Portfolio', href: '/portfolio' },
       { label: 'Contact', href: '/contact' },
     ],
     services: [
@@ -80,7 +79,7 @@ const Footer = () => {
                   <span className="font-medium">andrewmowatt11@gmail.com</span>
                 </a>
                 <a
-                  href="https://wa.me/353879662828"
+                  href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#C8D5B9] hover:text-[#D4E7C5] transition-colors group"
@@ -176,7 +175,7 @@ const Footer = () => {
                 <FiMail className="w-6 h-6" />
               </a>
               <a
-                href="https://wa.me/353879662828"
+                href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-[#C8D5B9] text-[#142929] flex items-center justify-center hover:bg-[#D4E7C5] hover:scale-110 transition-all duration-300 shadow-lg"
@@ -187,12 +186,8 @@ const Footer = () => {
 
             {/* Legal Links */}
             <div className="flex items-center gap-4 text-sm">
-              <Link href="/privacy" className="text-[#C8D5B9]/60 hover:text-[#D4E7C5] transition-colors">
-                Privacy Policy
-              </Link>
-              <span className="text-[#C8D5B9]/30">•</span>
-              <Link href="/terms" className="text-[#C8D5B9]/60 hover:text-[#D4E7C5] transition-colors">
-                Terms of Service
+              <Link href="/cookies" className="text-[#C8D5B9]/60 hover:text-[#D4E7C5] transition-colors">
+                Cookie Policy
               </Link>
             </div>
           </div>

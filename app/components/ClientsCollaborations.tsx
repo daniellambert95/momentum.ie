@@ -63,7 +63,7 @@ const ClientsCollaborations = () => {
               href="/contact"
               className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#4A7C7E] text-[#F5E6D3] hover:bg-[#142929] hover:scale-105 hover:shadow-xl inline-block"
             >
-              View Our Portfolio
+              Get In Touch
             </Link>
           </div>
 

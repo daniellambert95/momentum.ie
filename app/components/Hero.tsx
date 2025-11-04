@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="lg:col-span-7 space-y-4 sm:space-y-6 md:space-y-8 text-center lg:text-left">
               <div className="space-y-4 sm:space-y-5 md:space-y-6">
                 <h1
-                  className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl tracking-tight text-[#142929] leading-[1.05] animate-fade-in-up"
+                  className="pt-12 md:pt-0 text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl tracking-tight text-[#142929] leading-[1.05] animate-fade-in-up"
                   style={{ fontFamily: 'var(--font-lexend-deca)', fontWeight: 700 }}
                 >
                   CONTENT THAT CONNECTS

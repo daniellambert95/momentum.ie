@@ -1,7 +1,64 @@
+'use client';
+
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_name: 'Momentum.ie Contact Form',
+          subject: 'New Contact Form Submission from Momentum.ie',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
@@ -20,52 +77,96 @@ export default function ContactPage() {
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold mb-1">Email</h3>
-                <p className="text-primary">andrewmowatt11@gmail.com</p>
+                <a href="mailto:andrewmowatt11@gmail.com" className="text-[#4A7C7E] hover:text-[#142929] transition-colors">
+                  andrewmowatt11@gmail.com
+                </a>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                <p>+353 87 966 2828</p>
+                <h3 className="text-lg font-semibold mb-1">WhatsApp</h3>
+                <a
+                  href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#4A7C7E] hover:text-[#142929] transition-colors font-medium"
+                >
+                  <FaWhatsapp className="w-5 h-5" />
+                  <span>+353 87 966 2828</span>
+                </a>
               </div>
             </div>
-            
+
             <div className="mt-12">
               <a href="https://calendly.com/andrewmowatt11" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block">
                 Get In Touch
               </a>
             </div>
           </div>
-          
+
           <div className="service-card p-8">
             <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
-            <form className="space-y-6">
+
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-200 rounded-md">
+                Thank you! Your message has been sent successfully.
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-200 rounded-md">
+                Oops! Something went wrong. Please try again or email us directly.
+              </div>
+            )}
+
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium mb-2" htmlFor="name">Name</label>
-                <input 
-                  id="name" 
-                  type="text" 
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800"
                   placeholder="Your name"
+                  disabled={isSubmitting}
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2" htmlFor="email">Email</label>
-                <input 
-                  id="email" 
-                  type="email" 
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800"
                   placeholder="Your email"
+                  disabled={isSubmitting}
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2" htmlFor="message">Message</label>
-                <textarea 
-                  id="message" 
+                <textarea
+                  id="message"
+                  name="message"
                   rows={5}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800"
                   placeholder="Your message"
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
-              <button type="submit" className="w-full px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl">Send Message</button>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
             </form>
           </div>
         </div>
