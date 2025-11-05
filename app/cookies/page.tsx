@@ -54,7 +54,7 @@ export default function CookiesPage() {
               <h2 className="text-2xl font-bold mb-4 text-[#142929]">Questions?</h2>
               <p className="leading-relaxed">
                 If you have any questions about our cookie policy or privacy practices, please don&apos;t hesitate to
-                contact us at <a href="mailto:andrewmowatt11@gmail.com" className="text-[#4A7C7E] hover:text-[#142929] font-semibold underline">andrewmowatt11@gmail.com</a>.
+                contact us at <a href="mailto:momentum11you@gmail.com" className="text-[#4A7C7E] hover:text-[#142929] font-semibold underline">momentum11you@gmail.com</a>.
               </p>
             </section>
 

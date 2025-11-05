@@ -78,7 +78,7 @@ export default function ContactPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-12">
               <a
-                href="mailto:andrewmowatt11@gmail.com"
+                href="mailto:momentum11you@gmail.com"
                 className="flex items-center justify-center gap-3 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl"
               >
                 <FiMail className="w-6 h-6" />

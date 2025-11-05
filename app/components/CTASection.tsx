@@ -34,7 +34,7 @@ const CTASection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
-                href="mailto:andrewmowatt11@gmail.com"
+                href="mailto:momentum11you@gmail.com"
                 className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#C8D5B9] text-[#142929] hover:bg-[#D4E7C5] hover:scale-105 hover:shadow-xl text-center"
               >
                 Send Email

@@ -21,7 +21,7 @@ const Footer = () => {
     ],
     social: [
       { label: 'Instagram', href: 'https://instagram.com/itismomentum', icon: <FiInstagram /> },
-      { label: 'Email', href: 'mailto:andrewmowatt11@gmail.com', icon: <FiMail /> },
+      { label: 'Email', href: 'mailto:momentum11you@gmail.com', icon: <FiMail /> },
     ]
   };
 
@@ -70,13 +70,13 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-3">
                 <a
-                  href="mailto:andrewmowatt11@gmail.com"
+                  href="mailto:momentum11you@gmail.com"
                   className="flex items-center gap-3 text-[#C8D5B9] hover:text-[#D4E7C5] transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#C8D5B9]/20 flex items-center justify-center group-hover:bg-[#C8D5B9] transition-colors">
                     <FiMail className="w-5 h-5" />
                   </div>
-                  <span className="font-medium">andrewmowatt11@gmail.com</span>
+                  <span className="font-medium">momentum11you@gmail.com</span>
                 </a>
                 <a
                   href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
@@ -169,7 +169,7 @@ const Footer = () => {
                 <FiInstagram className="w-6 h-6" />
               </a>
               <a
-                href="mailto:andrewmowatt11@gmail.com"
+                href="mailto:momentum11you@gmail.com"
                 className="w-12 h-12 rounded-full bg-[#C8D5B9] text-[#142929] flex items-center justify-center hover:bg-[#D4E7C5] hover:scale-110 transition-all duration-300 shadow-lg"
               >
                 <FiMail className="w-6 h-6" />

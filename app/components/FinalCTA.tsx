@@ -29,7 +29,7 @@ const FinalCTA = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up-delay-2">
             <a
-              href="mailto:andrewmowatt11@gmail.com"
+              href="mailto:momentum11you@gmail.com"
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#142929] text-[#F5E6D3] rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-2xl"
             >
               <FiMail className="w-6 h-6" />
