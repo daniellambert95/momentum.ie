@@ -2,6 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { FaCompass, FaBullseye } from 'react-icons/fa';
@@ -163,14 +164,12 @@ export default function AboutPage() {
 
         {/* CTA */}
         <div className="max-w-4xl mx-auto mt-16 text-center">
-          <a
-            href="https://calendly.com/andrewmowatt11"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block"
           >
             Let&apos;s Work Together
-          </a>
+          </Link>
         </div>
       </div>
 

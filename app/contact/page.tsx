@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { FaWhatsapp } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -74,30 +75,23 @@ export default function ContactPage() {
             <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">
               Reach out — we&apos;d love to bring your story to life.
             </p>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-lg font-semibold mb-1">Email</h3>
-                <a href="mailto:andrewmowatt11@gmail.com" className="text-[#4A7C7E] hover:text-[#142929] transition-colors">
-                  andrewmowatt11@gmail.com
-                </a>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-1">WhatsApp</h3>
-                <a
-                  href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#4A7C7E] hover:text-[#142929] transition-colors font-medium"
-                >
-                  <FaWhatsapp className="w-5 h-5" />
-                  <span>+353 87 966 2828</span>
-                </a>
-              </div>
-            </div>
 
-            <div className="mt-12">
-              <a href="https://calendly.com/andrewmowatt11" target="_blank" rel="noopener noreferrer" className="px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl inline-block">
-                Get In Touch
+            <div className="flex flex-col sm:flex-row gap-4 mt-12">
+              <a
+                href="mailto:andrewmowatt11@gmail.com"
+                className="flex items-center justify-center gap-3 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#142929] text-[#F5E6D3] hover:bg-[#4A7C7E] hover:scale-105 hover:shadow-xl"
+              >
+                <FiMail className="w-6 h-6" />
+                <span>Email Us</span>
+              </a>
+              <a
+                href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 bg-[#C8D5B9] text-[#142929] hover:bg-[#D4E7C5] hover:scale-105 hover:shadow-xl"
+              >
+                <FaWhatsapp className="w-6 h-6" />
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>

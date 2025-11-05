@@ -80,12 +80,9 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-[#C8D5B9] hover:text-[#D4E7C5] transition-colors group touch-manipulation"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = "https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project";
-                  }}
                 >
                   <div className="w-10 h-10 rounded-full bg-[#D4E7C5]/20 flex items-center justify-center group-hover:bg-[#D4E7C5] transition-colors">
                     <FaWhatsapp className="w-5 h-5" />
@@ -179,12 +176,9 @@ const Footer = () => {
               </a>
               <a
                 href="https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-[#C8D5B9] text-[#142929] flex items-center justify-center hover:bg-[#D4E7C5] hover:scale-110 transition-all duration-300 shadow-lg touch-manipulation"
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = "https://wa.me/353879662828?text=Hi%20Momentum,%20I'd%20like%20to%20discuss%20a%20project";
-                }}
               >
                 <FaWhatsapp className="w-6 h-6" />
               </a>
@@ -201,8 +195,8 @@ const Footer = () => {
       </div>
 
       {/* Floating Decorative Elements */}
-      <div className="absolute top-1/2 left-10 w-20 h-20 bg-[#C8D5B9]/10 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-[#D4E7C5]/10 rounded-full blur-2xl"></div>
+      <div className="sm:hidden absolute top-1/2 left-10 w-20 h-20 bg-[#C8D5B9]/10 rounded-full blur-2xl pointer-events-none"></div>
+      <div className="sm:hidden absolute bottom-20 right-10 w-32 h-32 bg-[#D4E7C5]/10 rounded-full blur-2xl pointer-events-none"></div>
     </footer>
   );
 };
