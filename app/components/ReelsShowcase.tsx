@@ -21,18 +21,21 @@ const ReelsShowcase = () => {
       id: 1,
       type: 'local',
       src: '/videos/reels/centra-promotion-video-1.mp4',
+      thumbnail: '/videos/reels/centra-promotion-video.webp',
       title: 'Centra Summer Sizzlers'
     },
     {
       id: 2,
       type: 'local',
       src: '/videos/reels/centra-st-patricks-day-promo-video.mp4',
+      thumbnail: '/videos/reels/centra-st-patricks-day-promo-video.webp',
       title: "Centra St. Patrick's Day"
     },
     {
       id: 3,
       type: 'local',
       src: '/videos/reels/west-coast-cooler-promo-video.mp4',
+      thumbnail: '/videos/reels/west-coast-cooler-promo-video.webp',
       title: 'West Coast Cooler'
     },
     // Instagram embeds can be added here later:
@@ -133,6 +136,8 @@ const ReelsShowcase = () => {
                       className="w-full h-full object-contain"
                       loop
                       playsInline
+                      preload="metadata"
+                      poster={reel.thumbnail}
                       onEnded={() => setPlayingVideo(null)}
                     >
                       <source src={reel.src} type="video/mp4" />
@@ -141,7 +146,7 @@ const ReelsShowcase = () => {
 
                     {/* Play/Pause Overlay */}
                     <div
-                      className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                      className="absolute inset-0 flex items-center justify-center bg-transparent group-hover:bg-black/40 transition-all duration-300 cursor-pointer"
                       onClick={() => togglePlay(reel.id)}
                     >
                       <button className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center transform hover:scale-110 transition-transform duration-200">
