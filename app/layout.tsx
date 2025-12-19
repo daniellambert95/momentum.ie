@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Momentum" }],
   creator: "Momentum",
   publisher: "Momentum",
+  verification: {
+    google: "_ynGYS4RGFmYQmXAT06exx3WV7qjgLQYDAyxywE9zBE",
+  },
   robots: {
     index: true,
     follow: true,
